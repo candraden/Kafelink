@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - CafeLink</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-serif-title { font-family: 'Playfair Display', serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-[#fcfaf7] text-[#2d1b10] antialiased pb-20 md:pb-0">
+
+    <!-- Header Desktop -->
+    <header class="w-full bg-[#1e120a]/95 backdrop-blur-md text-white sticky top-0 z-50 shadow-sm hidden md:block">
+        <div class="max-w-6xl mx-auto px-8 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 font-semibold tracking-wide text-sm">
+                <i class="fa-solid fa-mug-hot text-amber-500"></i>
+                <span>CafeLink</span>
+            </a>
+            <nav class="flex items-center gap-8 text-xs tracking-wider font-light text-gray-300">
+                <a href="index.html" class="hover:text-white transition-all">Beranda</a>
+                <a href="menu.html" class="text-white font-medium border-b-2 border-amber-500 pb-1">Menu</a>
+                <a href="tentang.html" class="hover:text-white transition-all">Tentang</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <div class="bg-[#1e120a] text-white py-8 px-4 text-center">
+        <h1 class="text-2xl md:text-3xl font-bold font-serif-title">Menu Kami</h1>
+        <p class="text-gray-400 text-xs mt-1">Pilihan terbaik untuk menemani harimu</p>
+    </div>
+
+    <!-- Menu Section -->
+    <section class="max-w-5xl mx-auto px-4 mt-8 mb-16">
+
+        <!-- Filter Tabs -->
+        <div class="flex items-center justify-center gap-2 overflow-x-auto pb-3 mb-8 no-scrollbar">
+            <button onclick="switchCategory('all')" id="tab-all"
+                class="category-filter px-4 py-1.5 rounded-lg text-xs font-medium bg-[#2d1b10] text-white shadow-sm whitespace-nowrap">
+                Semua
+            </button>
+            <button onclick="switchCategory('makanan')" id="tab-makanan"
+                class="category-filter px-4 py-1.5 rounded-lg text-xs font-medium bg-gray-200/50 text-gray-600 hover:bg-gray-200/80 transition-all whitespace-nowrap">
+                Makanan
+            </button>
+            <button onclick="switchCategory('minuman')" id="tab-minuman"
+                class="category-filter px-4 py-1.5 rounded-lg text-xs font-medium bg-gray-200/50 text-gray-600 hover:bg-gray-200/80 transition-all whitespace-nowrap">
+                Minuman
+            </button>
+            <button onclick="switchCategory('dessert')" id="tab-dessert"
+                class="category-filter px-4 py-1.5 rounded-lg text-xs font-medium bg-gray-200/50 text-gray-600 hover:bg-gray-200/80 transition-all whitespace-nowrap">
+                Dessert
+            </button>
+            <button onclick="switchCategory('snack')" id="tab-snack"
+                class="category-filter px-4 py-1.5 rounded-lg text-xs font-medium bg-gray-200/50 text-gray-600 hover:bg-gray-200/80 transition-all whitespace-nowrap">
+                Snack
+            </button>
+        </div>
+
+        <!-- Menu Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5" id="menu-grid">
+
+            <!-- ===== MAKANAN ===== -->
+            <div class="menu-box-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-md group" data-category="makanan">
+                <div>
+                    <div class="h-40 w-full bg-gray-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?q=80&w=600&auto=format&fit=crop"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Nasi Goreng Spesial">
+                    </div>
+                    <div class="p-4">
+                        <span class="text-[10px] text-amber-700 font-semibold uppercase tracking-wider bg-amber-50 px-2 py-0.5 rounded-full">Makanan</span>
+                        <h5 class="font-bold text-[#2d1b10] text-sm tracking-tight truncate mt-2">Nasi Goreng Spesial</h5>
+                        <p class="text-[11px] text-gray-500 mt-1 line-clamp-2 min-h-[32px] leading-relaxed">Nasi goreng dengan topping telur dan ayam</p>
+                    </div>
+                </div>
+                <div class="px-4 pb-4 pt-2 border-t border-gray-50/60">
+                    <span class="text-amber-800 text-xs md:text-sm font-bold block">Rp 25.000</span>
+                </div>
+            </div>
+
+            <div class="menu-box-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-md group" data-category="makanan">
+                <div>
+                    <div class="h-40 w-full bg-gray-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?q=80&w=600&auto=format&fit=crop"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Spaghetti">
+                    </div>
+                    <div class="p-4">
+                        <span class="text-[10px] text-amber-700 font-semibold uppercase tracking-wider bg-amber-50 px-2 py-0.5 rounded-full">Makanan</span>
+                        <h5 class="font-bold text-[#2d1b10] text-sm tracking-tight truncate mt-2">Spaghetti</h5>
+                        <p class="text-[11px] text-gray-500 mt-1 line-clamp-2 min-h-[32px] leading-relaxed">Spaghetti bolognese dengan saus tomat pilihan</p>
+                    </div>
+                </div>
+                <div class="px-4 pb-4 pt-2 border-t border-gray-50/60">
+                    <span class="text-amber-800 text-xs md:text-sm font-bold block">Rp 22.000</span>
+                </div>
+            </div>
+
+            <div class="menu-box-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-md group" data-category="makanan">
+                <div>
+                    <div class="h-40 w-full bg-gray-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=600&auto=format&fit=crop"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Pizza">
+                    </div>
+                    <div class="p-4">
+                        <span class="text-[10px] text-amber-700 font-semibold uppercase tracking-wider bg-amber-50 px-2 py-0.5 rounded-full">Makanan</span>
+                        <h5 class="font-bold text-[#2d1b10] text-sm tracking-tight truncate mt-2">Pizza</h5>
+                        <p class="text-[11px] text-gray-500 mt-1 line-clamp-2 min-h-[32px] leading-relaxed">Pizza dengan topping pilihan keju mozzarella</p>
+                    </div>
+                </div>
+                <div class="px-4 pb-4 pt-2 border-t border-gray-50/60">
+                    <span class="text-amber-800 text-xs md:text-sm font-bold block">Rp 30.000</span>
+                </div>
+            </div>
+
+            <div class="menu-box-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-md group" data-category="makanan">
+                <div>
+                    <div class="h-40 w-full bg-gray-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600&auto=format&fit=crop"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Burger">
+                    </div>
+                    <div class="p-4">
+                        <span class="text-[10px] text-amber-700 font-semibold uppercase tracking-wider bg-amber-50 px-2 py-0.5 rounded-full">Makanan</span>
+                        <h5 class="font-bold text-[#2d1b10] text-sm tracking-tight truncate mt-2">Burger</h5>
+                        <p class="text-[11px] text-gray-500 mt-1 line-clamp-2 min-h-[32px] leading-relaxed">Burger juicy dengan daging pilihan dan sayuran segar</p>
+                    </div>
+                </div>
+                <div class="px-4 pb-4 pt-2 border-t border-gray-50/60">
+                    <span class="text-amber-800 text-xs md:text-sm font-bold block">Rp 28.000</span>
+                </div>
+            </div>
+
+            <!-- ===== MINUMAN ===== -->
+            <div class="menu-box-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-md group" data-category="minuman">
+                <div>
+                    <div class="h-40 w-full bg-gray-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=600&auto=format&fit=crop"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Es Kopi Susu">
+                    </div>
+                    <div class="p-4">
+                        <span class="text-[10px] text-blue-700 font-semibold uppercase tracking-wider bg-blue-50 px-2 py-0.5 rounded-full">Minuman</span>
+                        <h5 class="font-bold text-[#2d1b10] text-sm tracking-tight truncate mt-2">Cofee Latte</h5>
+                        <p class="text-[11px] text-gray-500 mt-1 line-clamp-2 min-h-[32px] leading-relaxed">Esspreso dan susu segar dengan rasa lembut dan creamy</p>
+                    </div>
+                </div>
+                <div class="px-4 pb-4 pt-2 border-t border-gray-50/60">
+                    <span class="text-amber-800 text-xs md:text-sm font-bold block">Rp 18.000</span>
+                </div>
+            </div>
+
+            <div class="menu-box-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-md group" data-category="minuman">
+                <div>
+                    <div class="h-40 w-full bg-gray-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=600&auto=format&fit=crop"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Americano">
+                    </div>
+                    <div class="p-4">
+                        <span class="text-[10px] text-blue-700 font-semibold uppercase tracking-wider bg-blue-50 px-2 py-0.5 rounded-full">Minuman</span>
+                        <h5 class="font-bold text-[#2d1b10] text-sm tracking-tight truncate mt-2">Americano</h5>
+                        <p class="text-[11px] text-gray-500 mt-1 line-clamp-2 min-h-[32px] leading-relaxed">Espresso shot dengan air panas, rasa kopi yang kuat</p>
+                    </div>
+                </div>
+                <div class="px-4 pb-4 pt-2 border-t border-gray-50/60">
+                    <span class="text-amber-800 text-xs md:text-sm font-bold block">Rp 15.000</span>
+                </div>
+            </div>
+
+            <div class="menu-box-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-md group" data-category="minuman">
+                <div>
+                    <div class="h-40 w-full bg-gray-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?q=80&w=600&auto=format&fit=crop"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Matcha Latte">
+                    </div>
+                    <div class="p-4">
+                        <span class="text-[10px] text-blue-700 font-semibold uppercase tracking-wider bg-blue-50 px-2 py-0.5 rounded-full">Minuman</span>
+                        <h5 class="font-bold text-[#2d1b10] text-sm tracking-tight truncate mt-2">Matcha Latte</h5>
+                        <p class="text-[11px] text-gray-500 mt-1 line-clamp-2 min-h-[32px] leading-relaxed">Matcha premium dengan susu segar</p>
+                    </div>
+                </div>
+                <div class="px-4 pb-4 pt-2 border-t border-gray-50/60">
+                    <span class="text-amber-800 text-xs md:text-sm font-bold block">Rp 20.000</span>
+                </div>
+            </div>
+
+            <div class="menu-box-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-md group" data-category="minuman">
+                <div>
+                    <div class="h-40 w-full bg-gray-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?q=80&w=600&auto=format&fit=crop"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Cappuccino">
+                    </div>
+                    <div class="p-4">
+                        <span class="text-[10px] text-blue-700 font-semibold uppercase tracking-wider bg-blue-50 px-2 py-0.5 rounded-full">Minuman</span>
+                        <h5 class="font-bold text-[#2d1b10] text-sm tracking-tight truncate mt-2">Cappuccino</h5>
+                        <p class="text-[11px] text-gray-500 mt-1 line-clamp-2 min-h-[32px] leading-relaxed">Espresso dengan foam susu lembut</p>
+                    </div>
+                </div>
+                <div class="px-4 pb-4 pt-2 border-t border-gray-50/60">
+                    <span class="text-amber-800 text-xs md:text-sm font-bold block">Rp 17.000</span>
+                </div>
+            </div>
+
+            <!-- ===== DESSERT ===== -->
+            <div class="menu-box-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-md group" data-category="dessert">
+                <div>
+                    <div class="h-40 w-full bg-gray-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=600&auto=format&fit=crop"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Brownies Coklat">
+                    </div>
+                    <div class="p-4">
+                        <span class="text-[10px] text-pink-700 font-semibold uppercase tracking-wider bg-pink-50 px-2 py-0.5 rounded-full">Dessert</span>
+                        <h5 class="font-bold text-[#2d1b10] text-sm tracking-tight truncate mt-2">Brownies Coklat</h5>
+                        <p class="text-[11px] text-gray-500 mt-1 line-clamp-2 min-h-[32px] leading-relaxed">Brownies lembut dengan topping coklat</p>
+                    </div>
+                </div>
+                <div class="px-4 pb-4 pt-2 border-t border-gray-50/60">
+                    <span class="text-amber-800 text-xs md:text-sm font-bold block">Rp 15.000</span>
+                </div>
+            </div>
+
+            <div class="menu-box-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-md group" data-category="dessert">
+                <div>
+                    <div class="h-40 w-full bg-gray-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=600&auto=format&fit=crop"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Pudding">
+                    </div>
+                    <div class="p-4">
+                        <span class="text-[10px] text-pink-700 font-semibold uppercase tracking-wider bg-pink-50 px-2 py-0.5 rounded-full">Dessert</span>
+                        <h5 class="font-bold text-[#2d1b10] text-sm tracking-tight truncate mt-2">Pudding</h5>
+                        <p class="text-[11px] text-gray-500 mt-1 line-clamp-2 min-h-[32px] leading-relaxed">Pudding segar aneka rasa</p>
+                    </div>
+                </div>
+                <div class="px-4 pb-4 pt-2 border-t border-gray-50/60">
+                    <span class="text-amber-800 text-xs md:text-sm font-bold block">Rp 10.000</span>
+                </div>
+            </div>
+
+            <div class="menu-box-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-md group" data-category="dessert">
+                <div>
+                    <div class="h-40 w-full bg-gray-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1562376552-0d160a2f238d?q=80&w=600&auto=format&fit=crop"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Waffle">
+                    </div>
+                    <div class="p-4">
+                        <span class="text-[10px] text-pink-700 font-semibold uppercase tracking-wider bg-pink-50 px-2 py-0.5 rounded-full">Dessert</span>
+                        <h5 class="font-bold text-[#2d1b10] text-sm tracking-tight truncate mt-2">Waffle</h5>
+                        <p class="text-[11px] text-gray-500 mt-1 line-clamp-2 min-h-[32px] leading-relaxed">Waffle crispy dengan topping madu dan buah</p>
+                    </div>
+                </div>
+                <div class="px-4 pb-4 pt-2 border-t border-gray-50/60">
+                    <span class="text-amber-800 text-xs md:text-sm font-bold block">Rp 18.000</span>
+                </div>
+            </div>
+
+            <!-- ===== SNACK ===== -->
+            <div class="menu-box-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-md group" data-category="snack">
+                <div>
+                    <div class="h-40 w-full bg-gray-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?q=80&w=600&auto=format&fit=crop"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Kentang Goreng">
+                    </div>
+                    <div class="p-4">
+                        <span class="text-[10px] text-green-700 font-semibold uppercase tracking-wider bg-green-50 px-2 py-0.5 rounded-full">Snack</span>
+                        <h5 class="font-bold text-[#2d1b10] text-sm tracking-tight truncate mt-2">Kentang Goreng</h5>
+                        <p class="text-[11px] text-gray-500 mt-1 line-clamp-2 min-h-[32px] leading-relaxed">Kentang goreng crispy dengan saus pilihan</p>
+                    </div>
+                </div>
+                <div class="px-4 pb-4 pt-2 border-t border-gray-50/60">
+                    <span class="text-amber-800 text-xs md:text-sm font-bold block">Rp 12.000</span>
+                </div>
+            </div>
+
+            <div class="menu-box-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-md group" data-category="snack">
+                <div>
+                    <div class="h-40 w-full bg-gray-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1562967914-608f82629710?q=80&w=600&auto=format&fit=crop"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Nugget Ayam">
+                    </div>
+                    <div class="p-4">
+                        <span class="text-[10px] text-green-700 font-semibold uppercase tracking-wider bg-green-50 px-2 py-0.5 rounded-full">Snack</span>
+                        <h5 class="font-bold text-[#2d1b10] text-sm tracking-tight truncate mt-2">Nugget Ayam</h5>
+                        <p class="text-[11px] text-gray-500 mt-1 line-clamp-2 min-h-[32px] leading-relaxed">Nugget ayam crispy dengan saus sambal</p>
+                    </div>
+                </div>
+                <div class="px-4 pb-4 pt-2 border-t border-gray-50/60">
+                    <span class="text-amber-800 text-xs md:text-sm font-bold block">Rp 13.000</span>
+                </div>
+            </div>
+
+            <div class="menu-box-item bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-md group" data-category="snack">
+                <div>
+                    <div class="h-40 w-full bg-gray-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=600&auto=format&fit=crop"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Roti Bakar">
+                    </div>
+                    <div class="p-4">
+                        <span class="text-[10px] text-green-700 font-semibold uppercase tracking-wider bg-green-50 px-2 py-0.5 rounded-full">Snack</span>
+                        <h5 class="font-bold text-[#2d1b10] text-sm tracking-tight truncate mt-2">Roti Coklat</h5>
+                        <p class="text-[11px] text-gray-500 mt-1 line-clamp-2 min-h-[32px] leading-relaxed">Roti Rasa Coklat dengan Isian Coklat</p>
+                    </div>
+                </div>
+                <div class="px-4 pb-4 pt-2 border-t border-gray-50/60">
+                    <span class="text-amber-800 text-xs md:text-sm font-bold block">Rp 10.000</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Bottom Nav Mobile -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-100 py-2.5 flex justify-around items-center text-gray-400 shadow-[0_-4px_12px_rgba(0,0,0,0.03)] z-50">
+        <a href="index.html" class="flex flex-col items-center gap-0.5 hover:text-[#2d1b10] transition-all">
+            <i class="fa-solid fa-house text-sm"></i>
+            <span class="text-[9px]">Beranda</span>
+        </a>
+        <a href="menu.html" class="flex flex-col items-center gap-0.5 text-[#2d1b10] font-semibold">
+            <i class="fa-solid fa-utensils text-sm"></i>
+            <span class="text-[9px]">Menu</span>
+        </a>
+        <a href="tentang.html" class="flex flex-col items-center gap-0.5 hover:text-[#2d1b10] transition-all">
+            <i class="fa-solid fa-circle-info text-sm"></i>
+            <span class="text-[9px]">Tentang</span>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 text-[10px] text-gray-400 bg-white border-t border-gray-100">
+        <p>© 2026 <span class="font-medium text-[#2d1b10]">CafeLink</span> - Coffee & Eatery. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function switchCategory(categoryId) {
+            const items = document.querySelectorAll('.menu-box-item');
+            items.forEach(item => {
+                if (categoryId === 'all' || item.getAttribute('data-category') === categoryId) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            const filters = document.querySelectorAll('.category-filter');
+            filters.forEach(filter => {
+                filter.classList.remove('bg-[#2d1b10]', 'text-white', 'shadow-sm');
+                filter.classList.add('bg-gray-200/50', 'text-gray-600');
+            });
+
+            const selectedButton = document.getElementById('tab-' + categoryId);
+            if (selectedButton) {
+                selectedButton.classList.remove('bg-gray-200/50', 'text-gray-600');
+                selectedButton.classList.add('bg-[#2d1b10]', 'text-white', 'shadow-sm');
+            }
+        }
+    </script>
+</body>
+</html>

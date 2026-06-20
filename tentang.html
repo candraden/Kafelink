@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami — CafeLink</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-serif-title { font-family: 'Playfair Display', serif; }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.65s ease, transform 0.65s ease;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .amber-rule::before {
+            content: '';
+            display: inline-block;
+            width: 32px;
+            height: 2px;
+            background: #b45309;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .nilai-card {
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .nilai-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(45,27,16,0.10);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .fade-up { opacity: 1; transform: none; }
+        }
+    </style>
+</head>
+<body class="bg-[#fcfaf7] text-[#2d1b10] antialiased pb-20 md:pb-0">
+
+    <!-- NAVBAR DESKTOP -->
+    <header class="w-full bg-[#1e120a]/95 backdrop-blur-md text-white sticky top-0 z-50 shadow-sm hidden md:block">
+        <div class="max-w-6xl mx-auto px-8 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 font-semibold tracking-wide text-sm">
+                <i class="fa-solid fa-mug-hot text-amber-500"></i>
+                <span>CafeLink</span>
+            </a>
+            <nav class="flex items-center gap-8 text-xs tracking-wider font-light text-gray-300">
+                <a href="index.html" class="hover:text-white transition-all">Beranda</a>
+                <a href="menu.html" class="hover:text-white transition-all">Menu</a>
+                <a href="tentang.html" class="text-white font-medium border-b-2 border-amber-500 pb-1">Tentang</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- NAVBAR MOBILE -->
+    <div class="md:hidden w-full bg-[#1e120a] text-white px-4 h-14 flex items-center justify-between sticky top-0 z-50">
+        <a href="index.html" class="text-white text-lg focus:outline-none">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <span class="text-xs font-medium tracking-widest text-gray-300">TENTANG KAMI</span>
+        <div class="w-6"></div>
+    </div>
+
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-[#1e120a] text-white min-h-[320px] md:min-h-[420px] flex items-end pb-12 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=1600&auto=format&fit=crop"
+             class="absolute inset-0 w-full h-full object-cover opacity-30" alt="Suasana CafeLink">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#1e120a] via-[#1e120a]/50 to-transparent"></div>
+
+        <div class="relative z-10 max-w-4xl mx-auto px-6 w-full">
+            <p class="amber-rule text-amber-500 text-[10px] font-bold tracking-[0.3em] uppercase mb-3">Cerita Kami</p>
+            <h1 class="font-serif-title text-3xl md:text-5xl font-bold leading-tight text-white max-w-xl">
+                Lebih dari Sekadar<br>
+                <em class="not-italic text-amber-400">Secangkir Kopi</em>
+            </h1>
+            <p class="text-gray-400 text-xs md:text-sm mt-4 max-w-lg leading-relaxed font-light">
+                Kenali kami lebih dekat — dari awal mula berdiri, filosofi kami menyeduh, hingga orang-orang di balik setiap cangkir yang kami sajikan.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- BREADCRUMB -->
+    <div class="max-w-4xl mx-auto px-6 pt-5 pb-1">
+        <p class="text-[11px] text-gray-400">
+            <a href="index.html" class="hover:text-amber-800 transition-colors">Beranda</a>
+            <span class="mx-1.5 text-gray-300">›</span>
+            <span class="text-[#2d1b10] font-medium">Tentang Kami</span>
+        </p>
+    </div>
+
+
+    <!-- BAGIAN 1: KISAH KAMI -->
+    <section class="max-w-4xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-2 gap-12 items-center fade-up">
+        <div class="relative">
+            <div class="rounded-2xl overflow-hidden shadow-lg aspect-[4/3] bg-gray-100">
+                <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?q=80&w=800&auto=format&fit=crop"
+                     class="w-full h-full object-cover" alt="Interior CafeLink">
+            </div>
+            <div class="absolute -bottom-4 -right-4 bg-[#2d1b10] text-white rounded-xl px-4 py-3 shadow-xl text-center">
+                <span class="block text-2xl font-bold font-serif-title text-amber-400">2019</span>
+                <span class="text-[9px] uppercase tracking-widest text-gray-300 font-light">Berdiri Sejak</span>
+            </div>
+        </div>
+
+        <div class="space-y-4 pt-4 md:pt-0">
+            <p class="amber-rule text-amber-700 text-[10px] font-bold tracking-[0.25em] uppercase">Kisah Kami</p>
+            <h2 class="font-serif-title text-2xl md:text-3xl font-bold leading-snug text-[#2d1b10]">
+                Dimulai dari Cinta pada Kopi Lokal
+            </h2>
+            <p class="text-gray-600 text-sm leading-relaxed">
+                CafeLink lahir dari kegelisahan sederhana: mengapa kopi terbaik Indonesia harus diminum terburu-buru? Kami percaya setiap tegukan layak dinikmati pelan-pelan, dalam ruang yang menenangkan, ditemani hidangan yang memuaskan.
+            </p>
+            <p class="text-gray-600 text-sm leading-relaxed">
+                Dimulai dari sebuah sudut kecil, kami tumbuh bersama komunitas pecinta kopi yang percaya bahwa kafe bukan sekadar tempat minum — melainkan ruang untuk bercerita, berkarya, dan menemukan kedamaian.
+            </p>
+            <div class="grid grid-cols-3 gap-3 pt-2">
+                <div class="text-center bg-[#f5ebd6]/50 rounded-xl py-3 px-2">
+                    <span class="block font-serif-title text-xl font-bold text-amber-800">5+</span>
+                    <span class="text-[10px] text-gray-500 leading-tight">Tahun Beroperasi</span>
+                </div>
+                <div class="text-center bg-[#f5ebd6]/50 rounded-xl py-3 px-2">
+                    <span class="block font-serif-title text-xl font-bold text-amber-800">40+</span>
+                    <span class="text-[10px] text-gray-500 leading-tight">Varian Menu</span>
+                </div>
+                <div class="text-center bg-[#f5ebd6]/50 rounded-xl py-3 px-2">
+                    <span class="block font-serif-title text-xl font-bold text-amber-800">10rb+</span>
+                    <span class="text-[10px] text-gray-500 leading-tight">Pelanggan Setia</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- BAGIAN 2: NILAI-NILAI KAMI -->
+    <section class="bg-[#1e120a] text-white py-16 px-6 fade-up">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-10">
+                <p class="amber-rule text-amber-500 text-[10px] font-bold tracking-[0.3em] uppercase">Apa yang Kami Junjung</p>
+                <h2 class="font-serif-title text-2xl md:text-3xl font-bold mt-2">Nilai-Nilai Kami</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="nilai-card bg-white/5 border border-white/10 rounded-2xl p-5 space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center">
+                        <i class="fa-solid fa-seedling text-amber-400 text-sm"></i>
+                    </div>
+                    <h3 class="font-semibold text-sm text-white">Biji Pilihan</h3>
+                    <p class="text-gray-400 text-[12px] leading-relaxed">Kami bermitra langsung dengan petani kopi dari Aceh, Flores, dan Toraja. Setiap biji dipilih tangan — bukan sekadar grade, tapi terasa di cangkir.</p>
+                </div>
+                <div class="nilai-card bg-white/5 border border-white/10 rounded-2xl p-5 space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center">
+                        <i class="fa-solid fa-heart text-amber-400 text-sm"></i>
+                    </div>
+                    <h3 class="font-semibold text-sm text-white">Diseduh dengan Hati</h3>
+                    <p class="text-gray-400 text-[12px] leading-relaxed">Setiap barista kami melewati pelatihan intensif. Kopi yang sama bisa terasa berbeda tergantung tangan yang menyeduhnya — kami jaga standar itu setiap hari.</p>
+                </div>
+                <div class="nilai-card bg-white/5 border border-white/10 rounded-2xl p-5 space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center">
+                        <i class="fa-solid fa-leaf text-amber-400 text-sm"></i>
+                    </div>
+                    <h3 class="font-semibold text-sm text-white">Ramah Lingkungan</h3>
+                    <p class="text-gray-400 text-[12px] leading-relaxed">Cup kertas biodegradable, sedotan bambu, dan ampas kopi yang kami daur ulang menjadi pupuk. Kecil tapi konsisten — begitu cara kami peduli.</p>
+                </div>
+                <div class="nilai-card bg-white/5 border border-white/10 rounded-2xl p-5 space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center">
+                        <i class="fa-solid fa-users text-amber-400 text-sm"></i>
+                    </div>
+                    <h3 class="font-semibold text-sm text-white">Komunitas Pertama</h3>
+                    <p class="text-gray-400 text-[12px] leading-relaxed">Ruang kami terbuka untuk pelukis, penulis, pekerja lepas, dan siapa saja yang butuh sudut tenang. Kafe ini bukan milik kami — milik semua yang datang.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- BAGIAN 3: FILOSOFI MENYEDUH -->
+    <section class="max-w-4xl mx-auto px-6 py-16 fade-up">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-4 order-2 md:order-1">
+                <p class="amber-rule text-amber-700 text-[10px] font-bold tracking-[0.25em] uppercase">Cara Kami Bekerja</p>
+                <h2 class="font-serif-title text-2xl md:text-3xl font-bold leading-snug">
+                    Filosofi di Balik Setiap Cangkir
+                </h2>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Proses menyeduh kopi bagi kami bukan sekadar prosedur — ini adalah ritual. Dari pemilihan suhu air yang tepat, rasio bubuk ke air, hingga durasi ekstraksi yang presisi, semua dilakukan dengan penuh kesadaran.
+                </p>
+                <div class="space-y-3 pt-2">
+                    <div class="flex items-start gap-3">
+                        <div class="flex-shrink-0 w-7 h-7 rounded-full bg-amber-800 text-white text-[10px] font-bold flex items-center justify-center mt-0.5">01</div>
+                        <div>
+                            <p class="text-sm font-semibold text-[#2d1b10]">Seleksi Biji</p>
+                            <p class="text-[12px] text-gray-500 leading-relaxed">Green bean disortir, lalu di-roast sesuai profil rasa yang diinginkan — light, medium, atau dark.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="flex-shrink-0 w-7 h-7 rounded-full bg-amber-800 text-white text-[10px] font-bold flex items-center justify-center mt-0.5">02</div>
+                        <div>
+                            <p class="text-sm font-semibold text-[#2d1b10]">Penggilingan Segar</p>
+                            <p class="text-[12px] text-gray-500 leading-relaxed">Kopi digiling sesaat sebelum diseduh agar aroma volatil tidak hilang ke udara.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="flex-shrink-0 w-7 h-7 rounded-full bg-amber-800 text-white text-[10px] font-bold flex items-center justify-center mt-0.5">03</div>
+                        <div>
+                            <p class="text-sm font-semibold text-[#2d1b10]">Ekstraksi Presisi</p>
+                            <p class="text-[12px] text-gray-500 leading-relaxed">Air bersuhu 88–94°C dengan rasio 1:15 menghasilkan ekstraksi sempurna — tidak under, tidak over.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="flex-shrink-0 w-7 h-7 rounded-full bg-amber-800 text-white text-[10px] font-bold flex items-center justify-center mt-0.5">04</div>
+                        <div>
+                            <p class="text-sm font-semibold text-[#2d1b10]">Disajikan Hangat</p>
+                            <p class="text-[12px] text-gray-500 leading-relaxed">Segera ke tangan Anda, selagi karakter dan aroma masih berada di puncaknya.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-1 md:order-2 relative">
+                <div class="rounded-2xl overflow-hidden shadow-lg aspect-[3/4] bg-gray-100">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop"
+                         class="w-full h-full object-cover" alt="Proses Menyeduh Kopi">
+                </div>
+                <div class="absolute -bottom-5 -left-4 max-w-[180px] bg-[#fcfaf7] border border-amber-200 rounded-xl px-4 py-3 shadow-lg">
+                    <p class="text-[11px] italic text-amber-800 leading-snug font-serif-title">"Kopi yang baik tidak butuh banyak kata."</p>
+                    <p class="text-[9px] text-gray-400 mt-1 font-medium">— Pendiri CafeLink</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- BAGIAN 4: TIM KAMI -->
+    <section class="bg-[#f5ebd6]/30 border-y border-amber-100 py-16 px-6 fade-up">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-10">
+                <p class="amber-rule text-amber-700 text-[10px] font-bold tracking-[0.3em] uppercase">Orang di Balik Meja</p>
+                <h2 class="font-serif-title text-2xl md:text-3xl font-bold mt-2 text-[#2d1b10]">Tim Kami</h2>
+                <p class="text-gray-500 text-xs mt-2 max-w-sm mx-auto leading-relaxed">Mereka yang setiap hari hadir, memastikan hari Anda dimulai dengan yang terbaik.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+                <!-- Deni - Owner -->
+                <div class="text-center group">
+                    <div class="w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden mx-auto mb-3 border-2 border-amber-200 group-hover:border-amber-500 transition-colors shadow-sm bg-gray-100">
+                        <img src="Deni_Formal.jpeg" class="w-full h-full object-cover object-top" alt="Deni">
+                    </div>
+                    <p class="text-sm font-semibold text-[#2d1b10]">Deni</p>
+                    <p class="text-[11px] text-amber-700 font-medium">Owner</p>
+                </div>
+
+                <!-- Salman - Manajer Produksi -->
+                <div class="text-center group">
+                    <div class="w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden mx-auto mb-3 border-2 border-amber-200 group-hover:border-amber-500 transition-colors shadow-sm bg-gray-100">
+                        <img src="Salman_formal.jpeg" class="w-full h-full object-cover object-top" alt="Salman">
+                    </div>
+                    <p class="text-sm font-semibold text-[#2d1b10]">Salman</p>
+                    <p class="text-[11px] text-amber-700 font-medium">Manajer Produksi</p>
+                </div>
+
+                <!-- Arin - Manajer Keuangan -->
+                <div class="text-center group">
+                    <div class="w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden mx-auto mb-3 border-2 border-amber-200 group-hover:border-amber-500 transition-colors shadow-sm bg-gray-100">
+                        <img src="arin_formal.jpeg" class="w-full h-full object-cover object-top" alt="Arin">
+                    </div>
+                    <p class="text-sm font-semibold text-[#2d1b10]">Arin</p>
+                    <p class="text-[11px] text-amber-700 font-medium">Manajer Keuangan</p>
+                </div>
+
+                <!-- Iklal - Manajer Marketing -->
+                <div class="text-center group">
+                    <div class="w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden mx-auto mb-3 border-2 border-amber-200 group-hover:border-amber-500 transition-colors shadow-sm bg-gray-100">
+                        <img src="iklal_formal.jpeg" class="w-full h-full object-cover object-top" alt="Iklal">
+                    </div>
+                    <p class="text-sm font-semibold text-[#2d1b10]">Iklal</p>
+                    <p class="text-[11px] text-amber-700 font-medium">Manajer Marketing</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- BAGIAN 5: GALERI -->
+    <section class="max-w-4xl mx-auto px-6 py-16 fade-up">
+        <div class="text-center mb-8">
+            <p class="amber-rule text-amber-700 text-[10px] font-bold tracking-[0.3em] uppercase">Atmosfer Kami</p>
+            <h2 class="font-serif-title text-2xl md:text-3xl font-bold mt-2 text-[#2d1b10]">Ruang yang Kami Bangun</h2>
+            <p class="text-gray-500 text-xs mt-2 max-w-sm mx-auto leading-relaxed">Setiap sudut dirancang agar Anda betah berlama-lama — dengan pencahayaan hangat, musik yang pas, dan kursi yang nyaman.</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+            <div class="col-span-2 md:col-span-1 row-span-2 rounded-2xl overflow-hidden h-48 md:h-auto bg-gray-100 shadow-sm">
+                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=800&auto=format&fit=crop"
+                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" alt="Suasana Kafe">
+            </div>
+            <div class="rounded-2xl overflow-hidden h-32 bg-gray-100 shadow-sm">
+                <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?q=80&w=600&auto=format&fit=crop"
+                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" alt="Area Duduk">
+            </div>
+            <div class="rounded-2xl overflow-hidden h-32 bg-gray-100 shadow-sm">
+                <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=600&auto=format&fit=crop"
+                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" alt="Bar Kopi">
+            </div>
+            <div class="rounded-2xl overflow-hidden h-32 bg-gray-100 shadow-sm">
+                <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?q=80&w=600&auto=format&fit=crop"
+                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" alt="Sudut Baca">
+            </div>
+            <div class="rounded-2xl overflow-hidden h-32 bg-gray-100 shadow-sm">
+                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=600&auto=format&fit=crop"
+                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" alt="Kopi Disajikan">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- BAGIAN 6: TESTIMONI -->
+    <section class="bg-[#1e120a] text-white py-16 px-6 fade-up">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-10">
+                <p class="amber-rule text-amber-500 text-[10px] font-bold tracking-[0.3em] uppercase">Kata Mereka</p>
+                <h2 class="font-serif-title text-2xl md:text-3xl font-bold mt-2">Yang Pelanggan Rasakan</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-5 space-y-3">
+                    <div class="flex gap-1 text-amber-400 text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-[12px] leading-relaxed italic">
+                        "Kopi susu gula aren-nya beda banget dari tempat lain. Manis alami, tidak enek. Sudah jadi ritual pagi saya setiap minggu."
+                    </p>
+                    <div class="flex items-center gap-2 pt-1">
+                        <div class="w-7 h-7 rounded-full bg-amber-700 flex items-center justify-center text-[10px] font-bold">DK</div>
+                        <div>
+                            <p class="text-[11px] font-semibold text-white">Dita K.</p>
+                            <p class="text-[10px] text-gray-500">Pelanggan Setia</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-5 space-y-3">
+                    <div class="flex gap-1 text-amber-400 text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-[12px] leading-relaxed italic">
+                        "Tempatnya bikin betah. Saya sering kerja dari sini — Wi-Fi kencang, kursi nyaman, dan baristanya ramah. Nilainya sempurna."
+                    </p>
+                    <div class="flex items-center gap-2 pt-1">
+                        <div class="w-7 h-7 rounded-full bg-amber-700 flex items-center justify-center text-[10px] font-bold">RH</div>
+                        <div>
+                            <p class="text-[11px] font-semibold text-white">Rizky H.</p>
+                            <p class="text-[10px] text-gray-500">Freelancer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-5 space-y-3">
+                    <div class="flex gap-1 text-amber-400 text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <p class="text-gray-300 text-[12px] leading-relaxed italic">
+                        "Brownies coklat-nya luar biasa — fudgy, tidak terlalu manis, dan porsinya pas. Wajib dicoba kalau mampir ke sini."
+                    </p>
+                    <div class="flex items-center gap-2 pt-1">
+                        <div class="w-7 h-7 rounded-full bg-amber-700 flex items-center justify-center text-[10px] font-bold">NA</div>
+                        <div>
+                            <p class="text-[11px] font-semibold text-white">Nadia A.</p>
+                            <p class="text-[10px] text-gray-500">Food Blogger</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- BAGIAN 7: INFORMASI KUNJUNGAN -->
+    <section class="max-w-4xl mx-auto px-6 py-16 fade-up">
+        <div class="text-center mb-10">
+            <p class="amber-rule text-amber-700 text-[10px] font-bold tracking-[0.3em] uppercase">Temukan Kami</p>
+            <h2 class="font-serif-title text-2xl md:text-3xl font-bold mt-2 text-[#2d1b10]">Informasi Kunjungan</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm space-y-2">
+                <div class="w-9 h-9 rounded-xl bg-amber-50 flex items-center justify-center mb-3">
+                    <i class="fa-solid fa-location-dot text-amber-800 text-sm"></i>
+                </div>
+                <h3 class="font-semibold text-sm text-[#2d1b10]">Alamat</h3>
+                <p class="text-[12px] text-gray-500 leading-relaxed">Jl. Nin Dulu Aja Hasil Belakangan</p>
+                <a href="https://maps.google.com" target="_blank"
+                   class="inline-flex items-center gap-1.5 text-amber-800 text-[11px] font-semibold mt-2 hover:underline">
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i> Lihat di Google Maps
+                </a>
+            </div>
+            <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm space-y-2">
+                <div class="w-9 h-9 rounded-xl bg-amber-50 flex items-center justify-center mb-3">
+                    <i class="fa-regular fa-clock text-amber-800 text-sm"></i>
+                </div>
+                <h3 class="font-semibold text-sm text-[#2d1b10]">Jam Operasional</h3>
+                <div class="space-y-1.5 pt-1">
+                    <div class="flex justify-between text-[12px]">
+                        <span class="text-gray-500">Senin – Jumat</span>
+                        <span class="font-medium text-[#2d1b10]">08.00 – 22.00</span>
+                    </div>
+                    <div class="flex justify-between text-[12px]">
+                        <span class="text-gray-500">Sabtu – Minggu</span>
+                        <span class="font-medium text-[#2d1b10]">07.00 – 23.00</span>
+                    </div>
+                    <div class="flex justify-between text-[12px]">
+                        <span class="text-gray-500">Hari Libur</span>
+                        <span class="font-medium text-green-700">Tetap Buka</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm space-y-2">
+                <div class="w-9 h-9 rounded-xl bg-amber-50 flex items-center justify-center mb-3">
+                    <i class="fa-solid fa-phone text-amber-800 text-sm"></i>
+                </div>
+                <h3 class="font-semibold text-sm text-[#2d1b10]">Hubungi Kami</h3>
+                <div class="space-y-2 pt-1">
+                    <a href="https://wa.me/6283806204817" target="_blank"
+                       class="flex items-center gap-2 text-[12px] text-gray-600 hover:text-green-700 transition-colors">
+                        <i class="fa-brands fa-whatsapp text-green-500 w-4"></i> WhatsApp
+                    </a>
+                    <a href="https://www.instagram.com/cafelink_?utm_source=qr&igsh=MWsybnd5eGZ0cW00Nw==" target="_blank"
+                       class="flex items-center gap-2 text-[12px] text-gray-600 hover:text-pink-600 transition-colors">
+                        <i class="fa-brands fa-instagram text-pink-500 w-4"></i> Instagram
+                    </a>
+                    <a href="https://www.tiktok.com/@hima.informatika.unilam?_r=1&_t=ZS-97HxhcqyWBA" target="_blank"
+                       class="flex items-center gap-2 text-[12px] text-gray-600 hover:text-black transition-colors">
+                        <i class="fa-brands fa-tiktok text-black w-4"></i> TikTok
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA -->
+    <section class="mx-4 md:max-w-4xl md:mx-auto mb-16 fade-up">
+        <div class="bg-[#2d1b10] rounded-2xl px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-6 text-white shadow-lg">
+            <div>
+                <h3 class="font-serif-title text-xl md:text-2xl font-bold leading-snug">Siap Menjelajahi Menu Kami?</h3>
+                <p class="text-gray-400 text-xs mt-1">Lebih dari 40 pilihan minuman dan makanan menunggu Anda.</p>
+            </div>
+            <a href="menu.html"
+               class="flex-shrink-0 bg-amber-500 hover:bg-amber-400 text-[#1e120a] font-bold text-xs py-3 px-6 rounded-xl transition-colors shadow-md flex items-center gap-2">
+                <i class="fa-solid fa-utensils"></i> Lihat Menu Lengkap
+            </a>
+        </div>
+    </section>
+
+
+    <!-- BOTTOM NAV MOBILE -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-100 py-2.5 flex justify-around items-center text-gray-400 shadow-[0_-4px_12px_rgba(0,0,0,0.03)] z-50">
+        <a href="index.html" class="flex flex-col items-center gap-0.5 hover:text-[#2d1b10] transition-all">
+            <i class="fa-solid fa-house text-sm"></i>
+            <span class="text-[9px]">Beranda</span>
+        </a>
+        <a href="menu.html" class="flex flex-col items-center gap-0.5 hover:text-[#2d1b10] transition-all">
+            <i class="fa-solid fa-utensils text-sm"></i>
+            <span class="text-[9px]">Menu</span>
+        </a>
+        <a href="tentang.html" class="flex flex-col items-center gap-0.5 text-[#2d1b10] font-semibold">
+            <i class="fa-solid fa-circle-info text-sm"></i>
+            <span class="text-[9px]">Tentang</span>
+        </a>
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="text-center py-6 text-[10px] text-gray-400 bg-white border-t border-gray-100">
+        <p>© 2026 <span class="font-medium text-[#2d1b10]">CafeLink</span> - Coffee & Eatery. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>
